@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Library.MVVM.App" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.MainWindow" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Library.MVVM.Data.EmployeeAddedEventArgs" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\EmployeeAddedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.EmployeeList" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\EmployeeList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.EmployeeRepository" Collapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAiAAgAAAAAgAAAAAQAAAAAAAAAAAgEAA=</HashCode>
+      <FileName>Data\EmployeeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.JobAddedEventArgs" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Data\JobAddedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.JobEmployee" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAEAAAAAAgEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\JobEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.JobList" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAAAAAAAAAEAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\JobList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.JobRepository" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACEAAAAAAAAAgAAAEAAAAIAAAAAAAAJAAAAAAAAA=</HashCode>
+      <FileName>Data\JobRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.SpecialityAddedEventArgs" Collapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\SpecialityAddedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.SpecialityEmp" Collapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAEAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Data\SpecialityEmp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.SpecialityList" Collapsed="true">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Data\SpecialityList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.SpecialityRepository" Collapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAAABAAAAAAACgAAAAAAAEIAAAEAAAAAAAA=</HashCode>
+      <FileName>Data\SpecialityRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Data.WorkWithSQLite" Collapsed="true">
+    <Position X="23.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEBAAAAAAAQAAAAABAAAAAQAAAAAAAAAQAAAAAg=</HashCode>
+      <FileName>Data\WorkWithSQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.model.Employee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAZAGggECAAhAAAQEkAAQgAYAAoAAABAAAiABgFUAg=</HashCode>
+      <FileName>model\Employee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Library.MVVM.model.Job" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAgAAAAgAEAAAkACAAAIAAgAAAAAAAAAAQAEAA=</HashCode>
+      <FileName>model\Job.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Library.MVVM.model.Speciality" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAgABAAgAgAAAkAAAAAIABgAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>model\Speciality.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Library.MVVM.model.MainWindowViewModel" Collapsed="true">
+    <Position X="8.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBQCCAAECCBxKEAgIChCAoAQAFEAUNEBIwEACABMAA=</HashCode>
+      <FileName>viewModel\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.Properties.Resources" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.view.AllEmpView" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>view\AllEmpView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.view.AllJobsView" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>view\AllJobsView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.view.AllSpecialitysView" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>view\AllSpecialitysView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.view.EmpView" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>view\EmpView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.view.JobView" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>view\JobView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.view.SpecialityView" Collapsed="true">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>view\SpecialityView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.viewModel.AllEmpsViewModel" Collapsed="true">
+    <Position X="11.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAAAAAACQAgQAAAAAAAAAAAIAQABAEAAAGAABAAAA=</HashCode>
+      <FileName>viewModel\AllEmpsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.viewModel.AllJobsViewModel" Collapsed="true">
+    <Position X="14.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggAAAAACAAAAAAAAAACAAAAAACABAAAIAEAABAAAA=</HashCode>
+      <FileName>viewModel\AllJobsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.viewModel.AllSpecialitysViewModel" Collapsed="true">
+    <Position X="13" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAAAAAACAAAAAAAAAACAAAAgCAABCAAAAAAAAAEAA=</HashCode>
+      <FileName>viewModel\AllSpecialitysViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.MVVM.viewModel.EmpViewModel" Collapsed="true">
+    <Position X="15" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JOtgEukUAAGBlIEgAlEALACCAgCqAAKJFMhmCBJFUAk=</HashCode>
+      <FileName>viewModel\EmpViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Library.MVVM.viewModel.JobViewModel" Collapsed="true">
+    <Position X="9.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAIkIAEAAAAkAAAAAEABASiAAAgCAAAAMAGAAAEAAE=</HashCode>
+      <FileName>viewModel\JobViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Library.MVVM.viewModel.SpecialityViewModel" Collapsed="true">
+    <Position X="10.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBIkIAEgAAAkAAAAAEABASCBAAgAEAAAMACAAAEAAE=</HashCode>
+      <FileName>viewModel\SpecialityViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Library.MVVM.viewModel.ViewModelBase" Collapsed="true">
+    <Position X="11.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACAAAAAAIAAAAQAQgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>viewModel\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Library.MVVM.viewModel.WorkspaceViewModel" Collapsed="true">
+    <Position X="11.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>viewModel\WorkspaceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

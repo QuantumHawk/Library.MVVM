@@ -1,0 +1,94 @@
+﻿<Window x:Class="Library.MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="MainWindow" MinHeight="350" MinWidth="640"
+         xmlns:vm="clr-namespace:Library.MVVM.viewModel"
+        xmlns:vw="clr-namespace:Library.MVVM.view">
+    <Window.Resources>
+        <ResourceDictionary Source="ResourceDictinary.xaml" />
+    </Window.Resources>
+
+    <Grid Margin="4,0" Grid.Row="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border         Grid.Column="0"  Grid.Row="1"      >
+            <StackPanel>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding NewEmployee}">
+                            <TextBlock Text="Добавить сотрудника" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <TextBlock Margin="2,6" >
+                    <Hyperlink Command="{Binding ShowEmployees}">
+                        <TextBlock Text="Показать сотрудников" />
+                    </Hyperlink>
+                </TextBlock>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding ChangeEmployee}">
+                            <TextBlock Text="Редактировать сотрудника" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding RemoveEmployee}">
+                            <TextBlock Text="Удалить сотрудника" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <Separator/>
+                <TextBlock Margin="2,6" >
+                    <Hyperlink Command="{Binding NewSpeciality}">
+                        <TextBlock Text="Добавить специальность" />
+                    </Hyperlink>    
+                </TextBlock>
+                <TextBlock Margin="2,6" >
+                    <Hyperlink Command="{Binding ShowSpecialitys}">
+                        <TextBlock Text="Показать все специальности" />
+                    </Hyperlink>
+                </TextBlock>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding ChangeSpeciality}">
+                            <TextBlock Text="Редактировать специальность" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding RemoveSpeciality}">
+                            <TextBlock Text="Удалить специальность" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <Separator/>
+
+                <TextBlock Margin="2,6" >
+                    <Hyperlink Command="{Binding NewJob}">
+                        <TextBlock Text="Добавить должность" />
+                    </Hyperlink>    
+                </TextBlock>
+                <TextBlock Margin="2,6" >
+                    <Hyperlink Command="{Binding ShowJobs}">
+                        <TextBlock Text="Показать все должности" />
+                    </Hyperlink>
+                </TextBlock>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding ChangeJob}">
+                            <TextBlock Text="Редактировать должность" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <TextBlock Margin="2,6" >
+                        <Hyperlink Command="{Binding RemoveJob}">
+                            <TextBlock Text="Удалить должность" />
+                        </Hyperlink>    
+                    </TextBlock>
+                <Separator/>
+            </StackPanel>
+        </Border>
+
+        <Border        Grid.Column="2" Grid.Row="1"  >
+            <HeaderedContentControl 
+          Content="{Binding Path=Workspaces}" 
+                 Style="{StaticResource MainHCCStyle}"
+                ContentTemplate="{StaticResource WorkspacesTemplate}"
+               />
+        </Border>
+    </Grid>
+</Window>

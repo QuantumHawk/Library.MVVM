@@ -1,0 +1,399 @@
+﻿<UserControl x:Class="Library.MVVM.view.EmpView"             
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:vm="clr-namespace:Library.MVVM.view" MinWidth="400" FontSize="14" FontFamily="Verdana">
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FFDFFFFD" Offset="0.998"/>
+            <GradientStop Color="#FEE7FFE6"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+
+    <ScrollViewer Margin="4" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="#FF1EFFCC" >
+        <StackPanel >
+            <Grid Height="538" Width="377" >
+                <Grid.Resources>
+                    <DataTemplate DataType="{x:Type ValidationError}">
+                        <TextBlock 
+    						FontStyle="Italic"
+    						Foreground="Red"
+    						HorizontalAlignment="Right"
+    						Margin="0,1"
+    						Text="{Binding ErrorContent}" />
+                    </DataTemplate>
+                </Grid.Resources>
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="173" />
+                    <ColumnDefinition Width="4" />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" MinHeight="24"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto" MinHeight="27" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" MinHeight="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" MinHeight="27" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" MinHeight="27" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto" MinHeight="28"/>
+                    <RowDefinition Height="0"/>
+                </Grid.RowDefinitions>
+
+
+                <!--FIRSTNAME-->
+                <Label 
+    				Grid.Row="1" Grid.Column="0" 
+    				Content="Имя" 
+    				HorizontalAlignment="Right"
+    				Target="{Binding ElementName=FirstNameTxt}" Width="39"
+      />
+                <TextBox 
+    				x:Name="FirstNameTxt"
+    				Grid.Row="1" Grid.Column="2" 
+                    
+    				Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+    				Validation.ErrorTemplate="{x:Null}" Margin="0,0,-1,0"
+      />
+                <ContentPresenter 
+    				Grid.Row="2" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=FirstNameTxt}"  Margin="11,0,0,10"
+      />
+
+
+                <!--SecondNAME-->
+                <Label 
+    				Grid.Row="3" Grid.Column="0" 
+    				Content="Отчество" 
+    				HorizontalAlignment="Right"
+    				Target="{Binding ElementName=SecondNameTxt}" Width="79" 
+      />
+
+
+                <TextBox 
+    				x:Name="SecondNameTxt"
+    				Grid.Row="3" Grid.Column="2" 
+    				Text="{Binding SecondName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+    				Validation.ErrorTemplate="{x:Null}" Margin="0,0,-1,0"
+      />
+                <ContentPresenter 
+    				Grid.Row="4" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=SecondNameTxt}"  Margin="11,0,-1,11"  />
+
+                <!--LASTNAME-->
+                <Label Content="Фамилия" Margin="0,0,4,0" Grid.Row="5" HorizontalAlignment="Right" Target="{Binding ElementName=LastNameTxt}" Width="75"/>
+                <TextBox x:Name="LastNameTxt" Grid.Column="2"  Grid.Row="5" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+    				Validation.ErrorTemplate="{x:Null}" Margin="0,0,-1,1" TextWrapping="Wrap" 
+        />
+                <ContentPresenter 
+    				Grid.Row="5" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=LastNameTxt}"  Margin="4,27,6,12" Grid.RowSpan="2"  />
+
+
+                <!-- пол-->
+                <Label 
+    				Grid.Row="7" Grid.Column="0" 
+    				Content="Пол" 
+    				HorizontalAlignment="Right"
+    				Target="{Binding ElementName=SexCmb}" Width="38"
+      />
+                <ComboBox Grid.Column="2" Grid.Row="7"
+    				x:Name="SexCmb" ItemsSource="{Binding SexList, Mode=OneTime}" 
+    				SelectedItem="{Binding Sex, Mode=Default, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+    				Validation.ErrorTemplate="{x:Null}">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            <GradientStop Color="#FFF4FFAB" Offset="0.5"/>
+                            <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+
+                <ContentPresenter 
+    				Grid.Row="8" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=SexCmb}"  Margin="11,0,10,10"  />
+
+                <!-- Дата рождения-->
+                <Label 
+    				Grid.Row="9" Grid.Column="0" 
+    				Content="Дата рождения"
+    				Target="{Binding ElementName=YearTxt}" HorizontalAlignment="Right" Width="121" />
+                <ContentPresenter 
+    				Grid.Row="9" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=YearTxt}"  Margin="10,30,0,12" Grid.RowSpan="2"  />
+
+                <DatePicker    x:Name="YearTxt" 
+                             SelectedDate="{Binding
+                              Birthday,
+                               Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{x:Null}"
+                            Grid.Column="2" Margin="0,0,0,1" Grid.Row="9"  />
+                <!--Образование-->
+                <Label 
+    				Grid.Row="11" Grid.Column="0" 
+    				Content="Образование" 
+    				HorizontalAlignment="Right"
+    				Target="{Binding ElementName=EducatuonListCmb}" Width="106"
+      />
+                <ComboBox Grid.Column="2" Grid.Row="11"
+    				x:Name="EducatuonListCmb" ItemsSource="{Binding EducationList, Mode=OneTime}" 
+    				SelectedItem="{Binding Education, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+    				Validation.ErrorTemplate="{x:Null}">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            <GradientStop Color="#FFFCFFB7" Offset="0.5"/>
+                            <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+
+                <ContentPresenter 
+    				Grid.Row="12" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=EducatuonListCmb}"  Margin="11,2,0,10"  />
+
+                <!-- Паспорт -->
+                <Label 
+    				Grid.Row="13" Grid.Column="0" 
+    				Content="Паспортные данные:" 
+    				HorizontalAlignment="Right"
+    				Target="{Binding ElementName=PassTxt}" Width="164"
+      />
+                <TextBox 
+    				x:Name="PassTxt"
+    				Grid.Row="13" Grid.Column="2" 
+    				Text="{Binding Pasport, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+    				Validation.ErrorTemplate="{x:Null}" Margin="0,0,-1,0" MaxLength="9"
+      />
+                <ContentPresenter 
+    				Grid.Row="14" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=PassTxt}"  Margin="10,0,-2,10"  />
+
+
+
+                <Label Content="Зарплата" HorizontalAlignment="Right" Grid.Row="15" Width="106" Target="{Binding ElementName=SalaryTxt}"/>
+                <TextBox x:Name="SalaryTxt" Grid.Column="2" Margin="0,0,0,1" Grid.Row="15" TextWrapping="Wrap" Text="{Binding Salary, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{x:Null}"/>
+                <ContentPresenter 
+    				Grid.Row="15" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=SalaryTxt}"  Margin="8,27,0,11" Grid.RowSpan="2"  />
+
+
+
+                <Label Target="{Binding ElementName=DateTxt}" Content="Дата назначения" HorizontalAlignment="Right" Margin="0,0,4,1" Grid.Row="17" Width="139"/>
+                <DatePicker x:Name="DateTxt" SelectedDate="{Binding Date, TargetNullValue={x:Static sys:DateTime.Now},
+                                           Mode=TwoWay, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{x:Null}"
+                                        
+                            Grid.Column="2" Margin="0,0,0,1" Grid.Row="17" Foreground="#FF1CBD03">
+                    <DatePicker.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                            <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                            <GradientStop Color="#FF718597" Offset="0.375"/>
+                            <GradientStop Color="#FF3298E4" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DatePicker.BorderBrush>
+                </DatePicker>
+                <ContentPresenter 
+    				Grid.Row="17" Grid.Column="2"
+    				Content="{Binding (Validation.Errors).CurrentItem, ElementName=DateTxt}"  Margin="8,28,0,-22" Grid.RowSpan="2"  />
+                <TextBlock Height="32" Margin="9,1,0,-32" Grid.Row="18" TextWrapping="Wrap" Text="Соответствует дате заполнения" Width="155" HorizontalAlignment="Left" VerticalAlignment="Top" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FF1B0BBD"/>
+                <TextBlock HorizontalAlignment="Left" Height="28" Margin="9,30,0,0" Grid.Row="9" Grid.RowSpan="2" TextWrapping="Wrap" Text="ограничение 1961-1995" VerticalAlignment="Top" Width="156" Foreground="#FFFB1C1C" FontSize="12" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Height="136" Margin="5,0,0,0" Grid.Row="1" Grid.RowSpan="5" TextWrapping="Wrap" Text="ФИО только русскими буквами" VerticalAlignment="Top" Width="101" Foreground="#FFF90F0F"/>
+
+            </Grid>
+
+            <Grid >
+                <Grid.Resources>
+                    <DataTemplate DataType="{x:Type ValidationError}">
+                        <TextBlock 
+    						FontStyle="Italic"
+    						Foreground="Red"
+    						HorizontalAlignment="Right"
+    						Margin="0,1"
+    						Text="{Binding ErrorContent}" />
+                    </DataTemplate>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2">
+                    <Label 
+            				Content="Должности"
+            				Target="{Binding ElementName=JobsTxt}" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+                    <ListBox
+                    		x:Name="JobsListBx" 
+                    		ItemsSource="{Binding Jobs, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                    		SelectedItem="{Binding SelectedJob, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                    		Validation.ErrorTemplate="{x:Null}" SelectionMode="Single" 
+                    		ScrollViewer.CanContentScroll="True" MinWidth="80" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" MinHeight="150" Height="150">
+                        <ListBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFD6FFBA" Offset="1"/>
+                                <GradientStop Color="#FFFBFFA7"/>
+                            </LinearGradientBrush>
+                        </ListBox.Background>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding GetsName}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center" Height="80" Margin="0,48,0,19" >
+                    <Button Content="&gt;" Command="{Binding TakeCommandJob}"  Margin="0,10" VerticalAlignment="Center" MinWidth="60"/>
+                    <Button Content="&lt;" Command="{Binding BackCommandJob}" Margin="0,10" VerticalAlignment="Center" />
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <Label 
+            			Content="Список должностей"
+            			Target="{Binding ElementName=JobsTxt}" HorizontalAlignment="Left" VerticalContentAlignment="Stretch"      
+                    />
+                    <ListBox
+            			x:Name="AvailableJobsListBx" 
+            			ItemsSource="{Binding AllJobs, Mode=TwoWay}"
+            			SelectedItem="{Binding SelectedAvaliableJob, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"                    
+            			SelectionMode="Single" ScrollViewer.CanContentScroll="True" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" MinHeight="150" MinWidth="80" Height="89">
+                        <ListBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFCEFF79"/>
+                                <GradientStop Color="#FFFDFFCB" Offset="0.502"/>
+                            </LinearGradientBrush>
+                        </ListBox.Background>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding GetsName}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <ContentPresenter 
+                	Content="{Binding (Validation.Errors).CurrentItem, ElementName=JobsListBx}" Height="30" Grid.Row="1"  Grid.ColumnSpan="3"/>
+            </Grid>
+
+            <Grid >
+                <Grid.Resources>
+                    <DataTemplate DataType="{x:Type ValidationError}">
+                        <TextBlock 
+    						FontStyle="Italic"
+    						Foreground="Red"
+    						HorizontalAlignment="Right"
+    						Margin="0,1"
+    						Text="{Binding ErrorContent}" />
+                    </DataTemplate>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2">
+                    <Label 
+            				Content="Специальности:"
+            				Target="{Binding ElementName=SpecialitysTxt}" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+                    <ListBox
+                    		x:Name="SpecialitysListBx" 
+                    		ItemsSource="{Binding Specialitys, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                    		SelectedItem="{Binding SelectedSpeciality, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                    		Validation.ErrorTemplate="{x:Null}" SelectionMode="Single" 
+                    		ScrollViewer.CanContentScroll="True" MinWidth="80" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" MinHeight="150" Height="150">
+                        <ListBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFCFFB6" Offset="0"/>
+                                <GradientStop Color="#FFB7FFAB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ListBox.Background>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding GetsName}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center" Height="80" Margin="0,48,0,19" >
+                    <Button Content="&gt;" Command="{Binding TakeCommandSpeciality}"  Margin="0,10" VerticalAlignment="Center" MinWidth="60"/>
+                    <Button Content="&lt;" Command="{Binding BackCommandSpeciality}" Margin="0,10" VerticalAlignment="Center" />
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <Label 
+            			Content="Список специальностей"
+            			Target="{Binding ElementName=SpecialitysTxt}" HorizontalAlignment="Left" VerticalContentAlignment="Stretch"      
+                    />
+                    <ListBox
+            			x:Name="AvailableSpecialityListBx" 
+            			ItemsSource="{Binding AllSpecialitys, Mode=TwoWay}"
+            			SelectedItem="{Binding SelectedAvaliableSpeciality, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"                    
+            			SelectionMode="Single" ScrollViewer.CanContentScroll="True" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" MinHeight="150" MinWidth="80" Height="150">
+                        <ListBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF5FF91" Offset="1"/>
+                                <GradientStop Color="#FFBCFFA8"/>
+                            </LinearGradientBrush>
+                        </ListBox.Background>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding GetsName}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <ContentPresenter 
+                	Content="{Binding (Validation.Errors).CurrentItem, ElementName=SpecialitysListBx}" Height="30" Grid.Row="1"  Grid.ColumnSpan="3"/>
+            </Grid>
+
+            <!-- SAVE BUTTON -->
+            <Grid Height="60">
+                <Button
+                	Command="{Binding SaveCommand}"
+                	Content="Сохранить"
+                	HorizontalAlignment="Right" 
+                	MinWidth="60" Width="60" RenderTransformOrigin="0.017,6.2" Height="21"  Margin="0,0,26,39" FontSize="10"  />
+                <TextBlock
+                	MinWidth="200"
+                	Text="{Binding Status, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"        
+                	Foreground="Green"
+                        Margin="149,31,26,0"
+                        />
+
+            </Grid>
+            <TextBlock TextWrapping="Wrap" Text="__"/>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
